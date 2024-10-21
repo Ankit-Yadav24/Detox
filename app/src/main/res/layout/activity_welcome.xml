@@ -69,6 +69,7 @@
       android:background="@drawable/btn_background"
       android:backgroundTint="#3B608C"
       android:fontFamily="@font/roboto_bold"
+      android:onClick="start"
       android:paddingLeft="30dp"
       android:paddingTop="15dp"
       android:paddingRight="30dp"

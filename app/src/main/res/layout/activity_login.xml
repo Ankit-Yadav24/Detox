@@ -36,7 +36,7 @@
                 android:textSize="40sp" />
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/loginEmail"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -46,13 +46,13 @@
                 android:drawableStart="@drawable/name"
                 android:drawablePadding="16dp"
                 android:ems="10"
-                android:hint="Username"
+                android:hint="Email"
                 android:textColorHint="#756C6C"
                 android:inputType="text"
                 android:padding="8dp" />
 
             <EditText
-                android:id="@+id/editTextText2"
+                android:id="@+id/loginPassword"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -68,13 +68,18 @@
                 android:padding="8dp" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/loginButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                app:srcCompat="@drawable/btn_arraw1" />
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                app:srcCompat="@drawable/btn_arraw1"
+                android:contentDescription="Arrow Button" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -118,7 +123,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/forgotPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -126,7 +131,13 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#38688C"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp"
+                android:contentDescription="Forgot Password Button"/>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

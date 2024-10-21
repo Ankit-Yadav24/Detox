@@ -1,33 +1,47 @@
 package com.example.detox
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.detox.databinding.ActivitySignupBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class Signup : AppCompatActivity() {
+    private lateinit var binding: ActivitySignupBinding
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup)
 
-        val usernameEditText = findViewById<EditText>(R.id.editTextText)
-        val emailEditText = findViewById<EditText>(R.id.editTextText2)
-        val passwordEditText = findViewById<EditText>(R.id.editTextText3)
-        val signupButton = findViewById<Button>(R.id.button)
+        // Initialize view binding
+        binding = ActivitySignupBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        signupButton.setOnClickListener {
-            val username = usernameEditText.text.toString()
-            val email = emailEditText.text.toString()
-            val password = passwordEditText.text.toString()
+        firebaseAuth = FirebaseAuth.getInstance()
 
-            if (username.isNotEmpty() && email.isNotEmpty() && password.length >= 8) {
-                Toast.makeText(this, "Signup successful", Toast.LENGTH_SHORT).show()
-                // You can navigate to the login screen here
+        binding.signupButton.setOnClickListener {
+            val username = binding.signupUsername.text.toString() // Get username
+            val email = binding.signupEmail.text.toString()
+            val password = binding.signupPassword.text.toString()
+
+            if (username.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
+                firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        // Store username or handle it as required
+                        val intent = Intent(this, Login::class.java)
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                }
             } else {
-                Toast.makeText(this, "Signup failed. Please check inputs", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Fields cannot be empty", Toast.LENGTH_SHORT).show()
             }
+        }
+        binding.loginRedirectText.setOnClickListener {
+            val loginIntent = Intent(this, Login::class.java)
+            startActivity(loginIntent)
         }
     }
 }

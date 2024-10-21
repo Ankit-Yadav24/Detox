@@ -1,5 +1,6 @@
 package com.example.detox
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,5 +17,9 @@ class Welcome : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+    }
+    fun start(view: android.view.View) {
+        val intent = Intent(this, Signup::class.java)
+        startActivity(intent)
     }
 }

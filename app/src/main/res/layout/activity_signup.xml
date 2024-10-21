@@ -15,7 +15,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="ExtraText">
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -35,7 +36,7 @@
                 android:textSize="40sp" />
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/signupUsername"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -51,7 +52,7 @@
                 android:padding="8dp" />
 
             <EditText
-                android:id="@+id/editTextText2"
+                android:id="@+id/signupEmail"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -67,7 +68,7 @@
                 android:textColorHint="#756C6C" />
 
             <EditText
-                android:id="@+id/editTextText3"
+                android:id="@+id/signupPassword"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -81,15 +82,17 @@
                 android:inputType="text"
                 android:padding="8dp"
                 android:textColorHint="#756C6C" />
-
-            <ImageView
-                android:id="@+id/imageView4"
+            <ImageButton
+                android:id="@+id/signupButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="32dp"
-                app:srcCompat="@drawable/btn_arrow2" />
+                android:background="?attr/selectableItemBackground"
+                app:srcCompat="@drawable/btn_arrow2"
+                android:contentDescription="Button" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -133,7 +136,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/loginRedirectText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -141,7 +144,14 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#38688C"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp"
+                android:contentDescription="Login Button" />
+
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
