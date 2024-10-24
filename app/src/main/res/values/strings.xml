@@ -1,3 +1,4 @@
 <resources>
+    <string name="default_web_client_id">837034416702-mh603uj944nb0jpavnc4juqho3r26p7f.apps.googleusercontent.com</string>
     <string name="app_name">Detox</string>
 </resources>

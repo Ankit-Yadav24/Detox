@@ -12,7 +12,20 @@
           "package_name": "com.example.detox"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "837034416702-mh603uj944nb0jpavnc4juqho3r26p7f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.detox",
+            "certificate_hash": "563661769265c0c0476d0ce2b8aa1426eca95823"
+          }
+        },
+        {
+          "client_id": "837034416702-ef1gsofktgmua7od756u215fchuuefuh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCXlwyNoLUmYfioKGRCG5-QHJYjldy08-k"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837034416702-ef1gsofktgmua7od756u215fchuuefuh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
