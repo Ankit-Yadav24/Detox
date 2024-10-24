@@ -43,7 +43,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edittext_background"
-                android:drawableStart="@drawable/name"
+                android:drawableStart="@drawable/email"
                 android:drawablePadding="16dp"
                 android:ems="10"
                 android:hint="Email"
@@ -69,16 +69,16 @@
 
             <ImageView
                 android:id="@+id/loginButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="end"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                android:clickable="true"
-                android:focusable="true"
                 android:background="?attr/selectableItemBackground"
-                app:srcCompat="@drawable/btn_arraw1"
-                android:contentDescription="Arrow Button" />
+                android:clickable="true"
+                android:contentDescription="Arrow Button"
+                android:focusable="true"
+                app:srcCompat="@drawable/btn_arraw1" />
 
 
             <LinearLayout
